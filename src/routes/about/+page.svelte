@@ -4,7 +4,7 @@ import { fly, slide, fade } from 'svelte/transition';
 import { quintInOut } from 'svelte/easing';
 
 </script>
-<h1 in:fade out:fade={{duration: 150}} class="absolute rotate-90 origin-top-left top-10 left-0 text-8xl translate-x-[5.25rem] z-40 text-black/70 md:text-black">ABOUT</h1>
+<h1 in:fade out:fade={{duration: 150}} class="absolute rotate-90 origin-top-left top-10 -left-1 sm:left-0 text-8xl translate-x-[5.25rem] z-40 text-black/40 md:text-black">ABOUT</h1>
 <div class="h-[calc(100vh-3.5rem)] w-screen relative top-0 left-0 z-0">
   <section class="md:ml-20 mx-4 sm:mt-14 mt-8 sm:pb-20 md:pb-0 flex flex-col sm:flex-row sm:items-end sm:flex-wrap md:flex-nowrap justify-end sm:justify-start">
     <article class="md:mr-4 sm:ml-0 sm:w-full lg:max-w-[30vw] mb-4 flex flex-col h-full sm:flex-col-reverse md:flex-col">

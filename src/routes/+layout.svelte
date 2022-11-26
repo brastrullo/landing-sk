@@ -59,15 +59,15 @@
 
 {#if $modalIsOpen}
   <div class="bg-black/70 fixed h-screen w-screen top-0 left-0 z-[60] flex flex-col">
-    <div transition:fly={{easing: quintInOut,y:-500, duration:250}} class="bg-white flex justify-between border-b border-black/10 h-[4rem]">
+    <div transition:fly={{easing: quintInOut,y:-150, duration:250}} class="bg-white flex justify-between border-b border-black/10 h-[4rem]">
       <p class="my-auto ml-4 font-light">bradleyrastru||o</p>
       <button on:click={toggleModal} class="text-black z-[80] m-4 font-black text-3xl">X</button>
     </div>
     <ul class="w-screen flex flex-col text-center text-2xl font-bold">
-      <li transition:fly={{easing: quintInOut,x:-1000, duration:425}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto " href="/about" on:click={toggleModal}>about</a></li>
-      <li transition:fly={{easing: quintInOut,x:1000, duration:400, delay: 50}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto " href="/clients" on:click={toggleModal}>clients</a></li>
-      <li transition:fly={{easing: quintInOut, x:-1000, duration:350, delay:100}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto" href="/blog" on:click={toggleModal}>blog</a></li>
-      <li transition:fly={{easing: quintInOut, x:1000, duration:325, delay:150}} class="h-[calc(100vh/4-1rem)] flex bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto" href="/social" on:click={toggleModal}>social</a></li>
+      <li transition:fly={{easing: quintInOut,x:-400, duration:425}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto " href="/about" on:click={toggleModal}>about</a></li>
+      <li transition:fly={{easing: quintInOut,x:400, duration:400, delay: 50}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto " href="/clients" on:click={toggleModal}>clients</a></li>
+      <li transition:fly={{easing: quintInOut, x:-400, duration:350, delay:100}} class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto" href="/blog" on:click={toggleModal}>blog</a></li>
+      <li transition:fly={{easing: quintInOut, x:400, duration:325, delay:150}} class="h-[calc(100vh/4-1rem)] flex bg-white"><a class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto" href="/social" on:click={toggleModal}>social</a></li>
     </ul>
   </div>  
 {/if}
