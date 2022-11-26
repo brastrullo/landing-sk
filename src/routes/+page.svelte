@@ -39,7 +39,7 @@ if (browser) {
   <div class="sm:h-screen w-screen transition-opacity flex flex-col sm:flex-row justify-end sm:justify-between sm:items-end sm:p-20">
     <div class="h-screen sm:h-auto flex flex-col justify-end">
       <p class="home-main-text text-5xl sm:text-7xl sm:max-w-80 mx-4 md:max-w-[40rem] font-bold mb-8 sm:mb-0" in:fade out:fly={{y:300, duration: 250, easing: quintInOut}}>"I create UI, Motion Graphics and anything we can imagine.</p>
-      <span class="sm:hidden text-center animate-bounce text-xs font-extralight opacity-50">scroll down</span>
+      <span class="sm:hidden text-center animate-bounce text-xs font-extralight opacity-60">scroll down</span>
     </div>
     <div class="h-screen sm:h-auto text-2xl flex flex-col justify-end sm:w-1/2 sm:bottom-20 sm:right-20 text-center sm:text-right mb-8 sm:mb-0">
       <p class="home-sub-text mb-[calc(25vh)] mx-2 sm:mx-0 sm:mb-8 sm:ml-4 font-light drop-shadow-2xl" in:fade out:fly={{x:600, duration: 250, easing: quintInOut}}>A multi-disciplinary creative using JS & CSS</p>
