@@ -14,5 +14,5 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a class={`${classNames}`} href="" on:click={calendlyHandler}>{text}</a>
+  <button class={`${classNames}`} on:click={calendlyHandler}>{text}</button>
 </div>
