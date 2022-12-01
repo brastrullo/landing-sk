@@ -13,7 +13,7 @@ import { quintInOut } from 'svelte/easing';
         |
         <a href="https://linkedin.com/in/bradleyrastrullo" target="_blank" class="ml-2 hover:underline underline-offset-4 font-light">linkedin</a>
       </div>
-      <img in:fly={{x: -1000, easing: quintInOut, duration: 650}} out:fade src="https://www.fillmurray.com/2000/1200" class="bg-cover object-cover h-[calc(100vh-5rem)] sm:h-[calc(100vh-6.5rem)] w-full" loading="lazy" alt="Profile" />
+      <img in:fly={{x: -1000, easing: quintInOut, duration: 650}} out:fade src="https://www.fillmurray.com/2000/1200" class="bg-cover object-cover bg-gray-200 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6.5rem)] w-full" loading="lazy" alt="Profile" />
     </article>
     <div class="absolute sm:static sm:flex sm:flex-col-reverse md:flex-col w-[calc(100%-2rem)] sm:w-auto mb-8 sm:mb-4 bg-gradient-to-b from-transparent via-white">
       <p class="overflow-scroll md:max-w-[30rem] inline-block h-min max-h-[15rem] sm:max-h-[30rem] p-8 mb-4 sm:p-0 sm:m-0 sm:max-h-auto sm:my-8 first-letter:text-5xl first-letter:font-black md:first-letter:text-9xl md:first-letter:font-bold" in:fly={{y: 1000, easing: quintInOut, duration: 550}} out:fade>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
