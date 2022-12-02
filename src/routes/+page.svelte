@@ -44,9 +44,9 @@ if (browser) {
       <span class="z-40 sm:hidden text-center animate-bounce text-xs font-extralight opacity-60">scroll down</span>
     </div>
     <div class="h-screen sm:h-auto text-2xl flex flex-col justify-end sm:w-1/2 sm:bottom-20 sm:right-20 text-center sm:text-right mb-8 sm:mb-0">
-      <p class="z-40 home-sub-text mb-[calc(25vh)] px-2 sm:px-0 sm:mb-4 sm:pl-4 font-light drop-shadow-2xl bg-gradient-to-b from-transparent via-white sm:bg-none" in:fade out:fly={{x:600, duration: 250, easing: quintInOut}}>A multi-disciplinary creative using JS & CSS</p>
+      <p class="z-40 home-sub-text mb-[calc(25vh)] px-2 sm:px-0 sm:mb-4 sm:pl-4 font-light drop-shadow-2xl bg-gradient-to-b from-transparent via-white/70 sm:bg-none" in:fade out:fly={{x:600, duration: 250, easing: quintInOut}}>A multi-disciplinary creative using JS & CSS</p>
       <div in:fade out:fly={{delay: 100, x:600, duration: 250, easing: quintInOut}} class="drop-shadow-2xl z-40">
-        <LoadCalendly text=contact wrapperClassNames="my-[1.25rem]" classNames="transition home-cta text-base font-bold border border-transparent py-6 sm:py-6 px-[calc(50%-4rem)] sm:px-8 md:px-14 lg:px-20 bg-black text-white hover:text-black hover:bg-white hover:border-black"/>
+        <LoadCalendly text=contact wrapperClassNames="my-[1.25rem]" classNames="transition home-cta text-base font-bold border border-transparent py-6 sm:py-6 px-[calc(50%-4rem)] sm:px-8 md:px-14 lg:px-20 bg-black text-white hover:text-black hover:bg-transparent hover:border-black"/>
       </div>
     </div>
   </div>

@@ -33,7 +33,7 @@
 
 <header class="relative">
   <nav>
-    <ul class="w-full flex justify-between h-6 sm:h-12 fixed top-0 left-0 z-50 bg-gradient-to-b from-white via-white flex items-center">
+    <ul class="w-full flex justify-between h-6 sm:h-12 fixed top-0 left-0 z-50 bg-gradient-to-b from-white via-white/90 items-center">
       <li><a href="/" class="ml-2 sm:ml-4 w-2/3 font-extralight">bradleyrastru||o</a></li>
       <li class="w-1/3 flex justify-end">
         {#if !$modalIsOpen}
@@ -41,7 +41,7 @@
           <button class="md:hidden mr-4 font-semibold" on:click={toggleModal}>menu</button>
         {/if}
         <ul class="hidden md:flex justify-end items-center">
-          <li class:hidden={hideContactButton} class="mr-6"><LoadCalendly text=contact classNames="transition drop-shadow-sm home-cta text-sm font-semibold border border-transparent py-1 px-4 bg-black text-white hover:text-black hover:bg-white hover:border-black"/></li>
+          <li class:hidden={hideContactButton} class="mr-6"><LoadCalendly text=contact classNames="transition drop-shadow-sm home-cta text-sm font-semibold border border-transparent py-1 px-4 bg-black text-white hover:text-black hover:bg-transparent hover:border-black"/></li>
           <li class="mr-4 hover:underline underline-offset-4 font-semibold"><a href="/about">about</a></li>
           <li class="ml-6">
             <ToggleButton />

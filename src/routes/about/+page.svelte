@@ -13,14 +13,14 @@ import { quintInOut } from 'svelte/easing';
         |
         <a href="https://linkedin.com/in/bradleyrastrullo" target="_blank" class="ml-2 hover:underline underline-offset-4 font-light">linkedin</a>
       </div>
-      <img in:fly={{x: -1000, easing: quintInOut, duration: 650}} out:fade src="https://www.fillmurray.com/2000/1200" class="bg-cover object-cover bg-gray-200 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6.5rem)] w-full" loading="lazy" alt="Profile" />
+      <img in:fly={{x: -1000, easing: quintInOut, duration: 650}} out:fade src="https://picsum.photos/2000/1200" class="bg-cover object-cover bg-gray-200 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6.5rem)] w-full" loading="lazy" alt="Profile" />
     </article>
-    <div class="absolute sm:static sm:flex sm:flex-col-reverse md:flex-col w-[calc(100%-2rem)] sm:w-auto mb-8 sm:mb-4 bg-gradient-to-b from-transparent via-white">
+    <div class="absolute sm:static sm:flex sm:flex-col-reverse md:flex-col w-[calc(100%-2rem)] sm:w-auto mb-8 sm:mb-4 bg-gradient-to-b from-transparent via-white/70">
       <p class="overflow-scroll md:max-w-[30rem] inline-block h-min max-h-[15rem] sm:max-h-[30rem] p-8 mb-4 sm:p-0 sm:m-0 sm:max-h-auto sm:my-8 first-letter:text-5xl first-letter:font-black md:first-letter:text-9xl md:first-letter:font-bold" in:fly={{y: 1000, easing: quintInOut, duration: 550}} out:fade>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata</p>
       <span class="-rotate-90 absolute bottom-1/2 right-6 translate-x-1/2 font-thin opacity-30 animate-pulse text-xs sm:hidden">scroll</span>
       <div in:fly={{delay: 150, y: 300, easing: quintInOut, duration: 550}} out:fade class="flex justify-center md:justify-start">
-        <LoadCalendly text="contact" wrapperClassNames="my-[1.35rem]" classNames="font-bold transition drop-shadow text-base border border-transparent py-6 px-[calc(50vw-4rem)] sm:px-20 bg-black/20 sm:bg-black text-white hover:bg-white/20 hover:text-black/50 sm:hover:text-black sm:hover:bg-white  sm:hover:border-black z-50"/>
+        <LoadCalendly text="contact" wrapperClassNames="my-[1.35rem] sm:my-0" classNames="font-bold transition drop-shadow text-base border border-transparent py-6 px-[calc(50vw-4rem)] sm:px-20 bg-black/30 sm:bg-black text-white hover:bg-white/30 hover:text-black/50 sm:hover:text-black sm:hover:bg-transparent  sm:hover:border-black z-50"/>
       </div>
     </div>
   </section>
