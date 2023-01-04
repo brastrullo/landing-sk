@@ -21,7 +21,7 @@
 	</label>
 </div>
 
-<style>
+<style lang="postcss">
 	.icon:before {
 		content: '';
 	}

@@ -77,7 +77,7 @@
 	</section>
 </div>
 
-<style>
+<style lang="postcss">
 	@media (max-width: 640px) {
 		.fade-text {
 			-webkit-mask-image: linear-gradient(

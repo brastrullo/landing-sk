@@ -59,7 +59,7 @@
   </IntersectionObserver>
 </div>
 
-<style>
+<style lang="postcss">
   h2 {
     margin-bottom: 1rem;
   }
