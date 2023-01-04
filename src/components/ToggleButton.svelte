@@ -1,5 +1,5 @@
 <script>
-	import { darkMode, toggleState } from '../utils/store'
+	import { darkMode, toggleState } from '../utils/utils/store'
 	import Sun from '../svg/sun.svelte'
 	import Moon from '../svg/moon.svelte'
 
