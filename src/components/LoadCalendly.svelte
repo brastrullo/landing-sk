@@ -5,6 +5,7 @@
 	const calendlyHandler = (e) => {
 		e.preventDefault()
 		let urlObj = { url: 'https://calendly.com/brastrullo/meet-brad' }
+		// @ts-ignore
 		Calendly.initPopupWidget(urlObj)
 		return false
 	}
