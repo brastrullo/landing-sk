@@ -1,8 +1,9 @@
 <script>
-	import LoadCalendly from '../../components/LoadCalendly.svelte'
+	import ContactButton from '../../components/ContactButton.svelte'
 	import { fly, slide, fade } from 'svelte/transition'
 	import { quintInOut } from 'svelte/easing'
 	import AbsoluteScrollText from '../../components/AbsoluteScrollText.svelte'
+	import VerticalTitleHeader from '../../components/VerticalTitleHeader.svelte'
 
 	const title = 'ABOUT'
 
@@ -15,13 +16,8 @@
 		'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata'
 </script>
 
-<h1
-	in:fade
-	out:fade={{ duration: 150 }}
-	class="absolute rotate-90 origin-top-left top-10 -left-1 sm:left-0 text-8xl translate-x-[5.25rem] z-40 text-black/40 md:text-black"
->
-	{title}
-</h1>
+<VerticalTitleHeader title={title} />
+
 <div class="h-[calc(100vh-3.5rem)] w-screen relative top-0 left-0 z-0">
 	<section
 		class="md:ml-20 mx-4 sm:mt-14 mt-8 sm:pb-20 md:pb-0 flex flex-col sm:flex-row sm:items-end sm:flex-wrap md:flex-nowrap justify-end sm:justify-start"
@@ -62,7 +58,7 @@
 				class="fade-text-wrapper relative flex flex-col justify-end sm:static bottom-0 sm:bg-none bg-gradient-to-b from-transparent via-neutral-400/90 neutral-400"
 			>
 				<p
-					class="fade-text overflow-scroll md:max-w-[30rem] inline-block h-[80vh] sm:h-min max-h-[20rem] sm:max-h-[30rem] px-8 pt-20 pb-20 sm:p-0 sm:max-h-auto sm:mt-0 sm:mb-8 first-letter:text-5xl first-letter:font-black md:first-letter:text-9xl md:first-letter:font-bold"
+					class="fade-text overflow-scroll md:max-w-[30rem] inline-block h-[80vh] sm:h-min max-h-[20rem] sm:max-h-[30rem] px-6 pt-20 pb-20 sm:p-0 sm:max-h-auto sm:mt-0 sm:mb-8 first-letter:text-5xl first-letter:font-black md:first-letter:text-9xl md:first-letter:font-bold"
 					in:fly={{ y: 1000, easing: quintInOut, duration: 550 }}
 					out:fade
 				>
@@ -75,11 +71,7 @@
 				out:fade
 				class="flex justify-center md:justify-start"
 			>
-				<LoadCalendly
-					text="contact"
-					wrapperClassNames="my-[1.35rem] sm:my-0"
-					classNames="font-bold transition drop-shadow text-base border border-transparent py-6 px-[calc(50vw-4rem)] sm:px-20 bg-black/30 sm:bg-black text-white hover:bg-white/30 hover:text-black/50 sm:hover:text-black sm:hover:bg-transparent  sm:hover:border-black z-50"
-				/>
+				<ContactButton classNames="font-bold transition drop-shadow text-base border border-transparent text-white py-6 px-[calc(50vw-4rem)] sm:px-20 bg-black/30 dark:bg-white/30 sm:bg-black hover:bg-white/30 dark:hover:bg-black/50 hover:text-black/50 dark:hover:text-white/80 sm:hover:text-black sm:hover:bg-transparent sm:hover:border-black z-50" />
 			</div>
 		</div>
 	</section>

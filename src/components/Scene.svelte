@@ -1,97 +1,64 @@
 <script>
-import { onMount } from 'svelte';
-import { browser } from '$app/environment';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+	import { onMount } from 'svelte'
+	import { browser } from '$app/environment'
+	import * as THREE from 'three'
+	import * as SC from 'svelte-cubed'
+	export let scrollY
 
-onMount(async () => {
-  const dat = await import('dat.gui');
-  if (browser) {
-    let sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    }
-    const scene = new THREE.Scene();
-    // scene.background = new THREE.Color( 0xffffff );
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize( sizes.width, sizes.height );
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    document.querySelector('#threejs-scene').appendChild( renderer.domElement );
+	let sizes = {}
+	let cubeRotationX = 0
+	let cubeRotationY = 0
+	let cubeRotationZ = 0
 
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/ window.innerHeight, 0.1, 1000 );
-    // const orbit = new OrbitControls(camera, renderer.domElement);
-    // orbit.enableDamping = true
-    // const axesHelper = new THREE.AxesHelper(5);
-    // scene.add(axesHelper);
+	let sphereRotationX = 0
+	let sphereRotationY = 0
+	let devicePixelRatio = 1
 
-    camera.position.set(0, -1.25, 10);
+	const clock = new THREE.Clock()
 
-    const cube = new THREE.Mesh(
-      new THREE.BoxGeometry( 1, 1, 1 ),
-      new THREE.MeshNormalMaterial()
-    );
-    scene.add( cube );
+	onMount(async () => {
+		if (browser) {
+			sizes = {
+				width: window.innerWidth,
+				height: window.innerHeight
+			}
+			window.addEventListener('resize', function () {
+				sizes = {
+					width: window.innerWidth,
+					height: window.innerHeight
+				}
+			})
 
-    const sphere = new THREE.Mesh(
-      new THREE.SphereGeometry( 4, 50, 50 ),
-      new THREE.MeshNormalMaterial({wireframe:true})
-    );
-    scene.add(sphere);
+			devicePixelRatio = window.devicePixelRatio
+		}
+	})
+	SC.onFrame(() => {
+		const elapsedTime = clock.getElapsedTime()
+		cubeRotationX = elapsedTime * Math.PI * 0.3
+		cubeRotationY = elapsedTime * Math.PI * 0.7
+		cubeRotationZ = elapsedTime * Math.PI * 0.05
 
-    /*
-    * GUI
-    */
-
-    // const gui = new dat.GUI({ autoPlace: false });
-    // document.querySelector('.moveGUI').appendChild(gui.domElement);
-
-    // const options = {
-    //   sphereColour: '#ffea00',
-    //   wireframe: true
-    // };
-
-    // gui.addColor(options, 'sphereColour').onChange((e) => {
-    //   sphere.material.color.set(e);
-    // });
-    
-    // gui.add(options, 'wireframe').onChange((e) => {
-    //   sphere.material.wireframe = e;
-    // });
-
-    const clock = new THREE.Clock()
-
-    const tick = () => {
-      const elapsedTime = clock.getElapsedTime();
-
-      cube.rotation.x = elapsedTime * Math.PI * .3;
-      cube.rotation.y = elapsedTime * Math.PI * .7;
-      cube.rotation.z = elapsedTime * Math.PI * .05;
-
-      sphere.rotation.y = elapsedTime * Math.PI * .03;
-      sphere.rotation.x = (Math.cos(elapsedTime) * .05);
-  
-      renderer.render( scene, camera );
-      // orbit.update();
-      requestAnimationFrame( tick );
-    }
-    tick();
-
-    window.addEventListener('resize', function() {
-      sizes = {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      }
-      camera.aspect = sizes.width / sizes.height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(sizes.width, sizes.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    })
-  }
-});
+		sphereRotationX = elapsedTime * Math.PI * 0.1
+		sphereRotationY = Math.cos(elapsedTime) * 0.1
+	})
 </script>
 
-<div class="fixed z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-  <section id="threejs-scene" class="">
-    <div class="moveGUI absolute" />
-  </section>
-</div>
+<SC.Canvas
+	antialias
+	alpha={true}
+	width={sizes.width}
+	height={sizes.height}
+	pixelRatio={Math.min(devicePixelRatio, 2)}
+>
+	<SC.Mesh
+		geometry={new THREE.SphereGeometry(4, 50, 50)}
+		material={new THREE.MeshNormalMaterial({ wireframe: true })}
+		rotation={[sphereRotationY, sphereRotationX, 0]}
+	/>
+	<SC.Mesh
+		geometry={new THREE.BoxGeometry()}
+		material={new THREE.MeshNormalMaterial()}
+		rotation={[cubeRotationX, cubeRotationY, cubeRotationZ]}
+	/>
+	<SC.PerspectiveCamera position={[1000 / scrollY * 1.5, -10, 20]} />
+</SC.Canvas>
