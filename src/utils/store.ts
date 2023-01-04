@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
-export let darkInitState = false;
+export const darkInitState = false;
 if (browser) {
   console.log(window.localStorage)
   // const darkState =
@@ -10,7 +10,7 @@ if (browser) {
   //     window.matchMedia('(prefers-color-scheme: dark)').matches);
   // darkInitState.set(darkState);
 }
-export let darkMode = writable(darkInitState);
+export const darkMode = writable(darkInitState);
 
 export const toggleState = () => {
   darkMode.update((state) => {
