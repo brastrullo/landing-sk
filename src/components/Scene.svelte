@@ -47,7 +47,9 @@
 				texture.needsUpdate = true
 			}
 			image.src = 'bird/textures/bird.png'
-			loadGLTF().then(_model => model = _model);
+			loadGLTF().then(gltf => {
+				return model = gltf
+			});
 		}
 	})
 	SC.onFrame(() => {
