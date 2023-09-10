@@ -1,6 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition'
-	export let title = 'no title'
+	export let title = ''
 </script>
 
 <h1

@@ -1,9 +1,12 @@
 <script>
 	import ContactButton from '../../components/ContactButton.svelte'
-	import { fly, slide, fade } from 'svelte/transition'
+	import { fly, fade } from 'svelte/transition'
 	import { quintInOut } from 'svelte/easing'
 	import AbsoluteScrollText from '../../components/AbsoluteScrollText.svelte'
 	import VerticalTitleHeader from '../../components/VerticalTitleHeader.svelte'
+
+	const imgSrc = "https://picsum.photos/seed/picsum/2000/1200.webp?w=1&p=1&blur=10"
+	const lqoipSrc = "https://picsum.photos/seed/picsum/2000/1200.webp?w=1&p=1&blur=10&lqip"
 
 	const title = 'ABOUT'
 
@@ -17,7 +20,6 @@
 </script>
 
 <VerticalTitleHeader title={title} />
-
 <div class="h-[calc(100vh-3.5rem)] w-screen relative top-0 left-0 z-0">
 	<section
 		class="md:ml-20 mx-4 sm:mt-14 mt-8 sm:pb-20 md:pb-0 flex flex-col sm:flex-row sm:items-end sm:flex-wrap md:flex-nowrap justify-end sm:justify-start"
@@ -45,7 +47,8 @@
 			<img
 				in:fly={{ x: -1000, easing: quintInOut, duration: 650 }}
 				out:fade
-				src="https://picsum.photos/2000/1200"
+				src={lqoipSrc}
+				data-src={imgSrc}
 				class="bg-cover object-cover bg-gray-200 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6.5rem)] w-full"
 				loading="lazy"
 				alt="Profile"
@@ -75,7 +78,7 @@
 			</div>
 		</div>
 	</section>
-</div>
+	</div>
 
 <style lang="postcss">
 	@media (max-width: 640px) {

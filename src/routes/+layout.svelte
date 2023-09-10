@@ -22,10 +22,10 @@
 	]
 
 	$: isHome = $page.url.pathname === '/'
-	$: isClients = $page.url.pathname === '/clients'
 	$: isAbout = $page.url.pathname === '/about'
-	$: isBlog = $page.url.pathname === '/blog'
-	$: isSocial = $page.url.pathname === '/social'
+	// $: isClients = $page.url.pathname === '/clients'
+	// $: isBlog = $page.url.pathname === '/blog'
+	// $: isSocial = $page.url.pathname === '/social'
 
 	$: shouldBeHidden = isHome
 	$: hideContactButton = isAbout || isHome
@@ -103,10 +103,10 @@
 						x: i % 2 === 0 ? 400 : -400,
 						duration: 425 - i * 5
 					}}
-					class="h-[calc(100vh/4-1rem)] flex border-b border-black/10 bg-white dark:border-white/10 dark:bg-black"
+					class={`h-[calc(100vh/5-.5rem)] flex border-b border-black/10 bg-white dark:border-white/10 dark:bg-black`}
 				>
 					<a
-						class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto "
+						class="transition hover:scale-125 py-14 px-[calc(30vw-1rem)] m-auto"
 						href={link.href}
 						on:click={toggleModal}>{link.name}</a
 					>
