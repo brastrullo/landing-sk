@@ -4,7 +4,7 @@
 	export let wrapperClassNames = 'my-3'
 	const calendlyHandler = (e) => {
 		e.preventDefault()
-		let urlObj = { url: 'https://calendly.com/brastrullo/meet-brad' }
+		let urlObj = { url: 'https://calendly.com/rastr-studio/meet-brad' }
 		// @ts-ignore
 		Calendly.initPopupWidget(urlObj)
 		return false

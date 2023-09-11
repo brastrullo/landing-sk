@@ -14,11 +14,7 @@
 		{ name: 'github', url: 'https://github.com/brastrullo' },
 		{ name: 'linkedin', url: 'https://linkedin.com/in/bradleyrastrullo' }
 	]
-
-	const mainText =
-		'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata'
 </script>
-
 <VerticalTitleHeader title={title} />
 <div class="h-[calc(100vh-3.5rem)] w-screen relative top-0 left-0 z-0">
 	<section
@@ -64,8 +60,7 @@
 					class="fade-text overflow-scroll md:max-w-[30rem] inline-block h-[80vh] sm:h-min max-h-[20rem] sm:max-h-[30rem] px-6 pt-20 pb-20 sm:p-0 sm:max-h-auto sm:mt-0 sm:mb-8 first-letter:text-5xl first-letter:font-black md:first-letter:text-9xl md:first-letter:font-bold"
 					in:fly={{ y: 1000, easing: quintInOut, duration: 550 }}
 					out:fade
-				>
-					{mainText}
+				> Hi there! I'm Brad a full stack web developer from Toronto, Canada, specializing in the Frontend with over 7 years of experience. I got my start in the industry by landing a junior position after <a class="link" href="https://brd.rs/coding-empowers" rel="noreferrer" target="_blank">6 months of self-teaching</a>. Looking back on how coding has empowered me, I am looking to do the same through <a class="link" href="https://learn.rastr.studio" rel="noreferrer" target="_blank">teaching</a>. I am a tech advocate but when I am not working on a creative project you can find me biking. I run a personal blog <a href="https://brd.rs" rel="noreferrer" target="_blank">brd.rs</a>.
 				</p>
 				<AbsoluteScrollText />
 			</div>
@@ -81,6 +76,12 @@
 	</div>
 
 <style lang="postcss">
+	.link {
+		color: coral;
+	}
+	.link:hover {
+		text-decoration: underline;
+	}
 	@media (max-width: 640px) {
 		.fade-text {
 			-webkit-mask-image: linear-gradient(

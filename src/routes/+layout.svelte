@@ -8,7 +8,7 @@
 	import ContactButtonSmall from '../components/ContactButtonSmall.svelte'
 	import { writable, get } from 'svelte/store'
 	import { darkMode } from '../utils/store'
-
+	
 	const modalIsOpen = writable(false)
 
 	const isDarkMode = get(darkMode)

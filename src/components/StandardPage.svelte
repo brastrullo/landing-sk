@@ -7,6 +7,7 @@
   export let src
   export let href
   export let mainText
+  export let subText
 </script>
 
 <VerticalTitleHeader {title} />
@@ -41,6 +42,7 @@
       class="w-[calc(100vw)] px-8 pb-4 sm:p-0 md:w-[60vw] sm:my-4 max-h-[calc(70vh)] mb-14 sm:w-[calc(100vw-4rem)] text-center absolute sm:static first-letter:text-5xl first-letter:font-black bg-gradient-to-b from-transparent via-white/70 dark:via-black md:bg-none"
     >
       {mainText}
+      <span class="block mt-2">{subText}</span>
     </p>
   </section>
 </div>
