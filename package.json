@@ -17,6 +17,7 @@
 		"@playwright/test": "1.25.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.1",
+		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@sveltejs/kit": "^1.0.1",
 		"@types/three": "^0.146.0",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",

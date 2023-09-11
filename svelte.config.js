@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-static'; // prerender pages
+import adapter from '@sveltejs/adapter-vercel';
+// import adapter from '@sveltejs/adapter-static'; // prerender pages
 // import adapter from '@sveltejs/adapter-auto'; // normal ssr mode
 import preprocess from 'svelte-preprocess';
 
